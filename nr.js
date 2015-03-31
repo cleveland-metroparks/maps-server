@@ -267,7 +267,7 @@ Ext.onReady(function() {
 	['ta_view', 'Terrestrial Assessment', false],
         ['nhd_lake_erie', 'Lake Erie', true],
         ['tpi', 'Landscape Position', false],
-        ['nr.big_trees_inventory', 'Big Tree Inventory', true]
+//      ['big_trees_inventory', 'Big Tree Inventory', false]
 ].reverse();
 
     Ext.each(overviewsConfig, function(ly,i,lys){
