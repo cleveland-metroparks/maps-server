@@ -155,17 +155,17 @@ Ext.onReady(function () {
 		groupLayerBg([
 				'aerial_2011_cir'
 			], 'Color Infrared 2011 (Cuyahoga)', true),
-		groupLayerBg([
-			'ex_mask',
-			'ex_facilities_footprints_cm',
-			'ex_cuy_roads_poly',
-			'ex_cm_trails',
-			'ex_detailed_hydro_view',
-			'ex_contours_2_all',
-			'ex_canopy_coarse',
-			'ex_cm_mowed_areas_beta',
-			'ex_reservation_boundaries_public_private_cm'
-			], 'Existing Conditions', true),
+	//	groupLayerBg([
+	//		'ex_mask',
+	//		'ex_facilities_footprints_cm',
+	//		'ex_cuy_roads_poly',
+	//		'ex_cm_trails',
+	//		'ex_detailed_hydro_view',
+	//		'ex_contours_2_all',
+	//		'ex_canopy_coarse',
+	//		'ex_cm_mowed_areas_beta',
+	//		'ex_reservation_boundaries_public_private_cm'
+	//		], 'Existing Conditions', true),
 		groupLayerBg([
 				'usgs_1950s-60s'
 			], '1950s-60s USGS Quads', true));
@@ -252,12 +252,12 @@ Ext.onReady(function () {
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['greenspace_trails', 'Greenspace Trails (Proposed/Actual)', false],
-		['signs', 'Sign Inventory', false],
+	//	['signs', 'Sign Inventory', false],
 		['cm_trails', 'Trails', true],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['cm_bridge_view', 'Trail Bridges', true],
-		['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
-		['neorsd_service_area', 'NEORSD SMP Service Area', false],
+	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
+	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
 		['wetlands_view', 'Wetlands', false],
 		['wetlands_owi', 'OWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
