@@ -228,9 +228,9 @@ Ext.onReady(function() {
         ['pcap', 'Assessed PCAP Sites', false],
         ['pcap_2012_final', 'PCAP 2012', false],
         ['pcap_2012_rings_final', 'PCAP 2012 with Compass', false],
-        ['pcap_2013', 'PCAP 2013', false],
-        ['pcap_2013_rings', 'PCAP 2013 with Compass', false],
-        ['pcap_ultra', 'ULTRA Assessed Sites', false],
+//      ['pcap_2013', 'PCAP 2013', false],
+//      ['pcap_2013_rings', 'PCAP 2013 with Compass', false],
+//      ['pcap_ultra', 'ULTRA Assessed Sites', false],
         ['pcap_oversample', 'PCAP Oversample', false],
         ['pcap_sites_orig', 'All PCAP Sites', false],
 //	['pcap_sites_orig_40mbuffer', 'PCAP 40m Buffers', false],
@@ -252,8 +252,8 @@ Ext.onReady(function() {
 	['soil_names', 'Soil Names', false],
 	['soil_hydric', 'Hydric Soils', false],
 //	['hydro_view', 'Hydro', false],
-	['geology_view', 'Geology', false],
-	['bed_depth', 'Bedrock Depth', false],
+//	['geology_view', 'Geology', false],
+//	['bed_depth', 'Bedrock Depth', false],
 	['detailed_hydro_view', 'Detailed Hydro', false],
 	['hydroshadow', 'TestHydro', false],
 //        ['grid_view', 'Grid', false],
@@ -380,11 +380,11 @@ Ext.onReady(function() {
         };
     };
     
-    layers.push(
-        groupLayer1([
-            'reservation_boundaries_public_private_cm_dissolved_mask_gradien'
-        ], 'Mask')
-    );
+   // layers.push(
+   //     groupLayer1([
+   //         'reservation_boundaries_public_private_cm_dissolved_mask_gradien'
+   //     ], 'Mask')
+   // );
 
 // for non-background group layers
     
