@@ -266,7 +266,7 @@ Ext.onReady(function() {
 	['cuva_bounds', 'Cuyahoga Valley NP', false],
 	['ta_view', 'Terrestrial Assessment', false],
         ['nhd_lake_erie', 'Lake Erie', true],
-        ['tpi', 'Landscape Position', false]
+        ['tpi', 'Landscape Position', false],
         ['big_trees_inventory', 'Big Tree Inventory', false]
 ].reverse();
 
