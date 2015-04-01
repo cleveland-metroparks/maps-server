@@ -253,9 +253,9 @@ Ext.onReady(function () {
 	var overviewsConfig = [
 		['greenspace_trails', 'Greenspace Trails (Proposed/Actual)', false],
 	//	['signs', 'Sign Inventory', false],
-		['cm_trails', 'Trails', true],
+		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['cm_bridge_view', 'Trail Bridges', true],
+		['cm_bridge_view', 'Trail Bridges', false],
 	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
 	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
 		['wetlands_view', 'Wetlands', false],
