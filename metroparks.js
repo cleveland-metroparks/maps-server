@@ -341,7 +341,7 @@ Ext.onReady(function () {
 			], 'Golf', false),
 		groupLayerNoSwitcher1([
 				'nhd_lake_erie'
-			], 'Lake Erie', false));
+			], 'Lake Erie', true));
 	
 	/////////////////////////////////////////////////////
 	var groupLayer1 = function (layers, groupName) {
