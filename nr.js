@@ -424,7 +424,7 @@ Ext.onReady(function() {
     };
     
     layers.push(
-        groupLayer([
+//        groupLayer([
 	    //'pws_summary',
 //	    'p_wshed_view'  	
 //        ], 'Priority Watersheds'),
