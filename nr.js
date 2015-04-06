@@ -426,7 +426,7 @@ Ext.onReady(function() {
     layers.push(
         groupLayer([
 	    //'pws_summary',
-	    'p_wshed_view'  	
+	    'p_wshed_view2'  	
         ], 'Priority Watersheds'),
         groupLayer([
             'parcels_yellow'
