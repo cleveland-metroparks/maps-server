@@ -223,8 +223,6 @@ Ext.onReady(function() {
 //	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 //	['cm_bridge_view', 'Trail Bridges', true],
 //        ['boundaries_test', 'B-Test', false],
-	['cm_trails', 'Trails', false],
-	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
         ['pcap', 'Assessed PCAP Sites', false],
         ['pcap_2012_final', 'PCAP 2012', false],
         ['pcap_2012_rings_final', 'PCAP 2012 with Compass', false],
@@ -233,6 +231,7 @@ Ext.onReady(function() {
 //      ['pcap_ultra', 'ULTRA Assessed Sites', false],
         ['pcap_oversample', 'PCAP Oversample', false],
         ['pcap_sites_orig', 'All PCAP Sites', false],
+        ['big_trees_inventory', 'Big Tree Inventory', false],
 //	['pcap_sites_orig_40mbuffer', 'PCAP 40m Buffers', false],
 //	['pcap_sites_orig_compass_40m', 'PCAP 40m Compass', false],
 //	['pcap_sites_orig_140mbuffer', 'PCAP 140m Buffers', false],
@@ -240,6 +239,8 @@ Ext.onReady(function() {
 	['pcap_ash_treatment', 'Ash Treatment', false],
 //	['pcap_sites', 'PCAP nudged', false],
         ['phwh_view', 'Primary Headwater Streams', false],
+        ['cm_trails', 'Trails', false],
+	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
 //	['p_wshed_view', 'Priority Watersheds', false],   
 	['vernal_pools_field', 'Surveyed Vernal Pools', false],
@@ -266,8 +267,7 @@ Ext.onReady(function() {
 	['cuva_bounds', 'Cuyahoga Valley NP', false],
 	['ta_view', 'Terrestrial Assessment', false],
         ['nhd_lake_erie', 'Lake Erie', true],
-        ['tpi', 'Landscape Position', false],
-        ['big_trees_inventory', 'Big Tree Inventory', false]
+        ['tpi', 'Landscape Position', false]
 ].reverse();
 
     Ext.each(overviewsConfig, function(ly,i,lys){
