@@ -242,7 +242,7 @@ Ext.onReady(function() {
         ['cm_trails', 'Trails', false],
 	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
-//	['p_wshed_view', 'Priority Watersheds', false],   
+	['p_wshed_view', 'Priority Watersheds', false],   
 	['vernal_pools_field', 'Surveyed Vernal Pools', false],
 	['vernal_pools_view', 'Modeled Vernal Pools and Other Wetlands', false],
 	['wetlands_view', 'Wetlands', false],
@@ -426,7 +426,7 @@ Ext.onReady(function() {
     layers.push(
         groupLayer([
 	    //'pws_summary',
-	    'p_wshed_view2'  	
+	    'p_wshed_view'  	
         ], 'Priority Watersheds'),
         groupLayer([
             'parcels_yellow'
