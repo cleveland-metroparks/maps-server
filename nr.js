@@ -242,6 +242,7 @@ Ext.onReady(function() {
         ['cm_trails', 'Trails', false],
 	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
+['occurrence_area_boundaries_2015', 'Occurrence Area Boundaries', false],
 //	['p_wshed_view', 'Priority Watersheds', false],   
 	['vernal_pools_field', 'Surveyed Vernal Pools', false],
 	['vernal_pools_view', 'Modeled Vernal Pools and Other Wetlands', false],
