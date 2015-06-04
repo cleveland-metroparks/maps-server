@@ -261,6 +261,7 @@ Ext.onReady(function () {
 		['wetlands_view', 'Wetlands', false],
 		['wetlands_owi', 'OWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
+                ['contours_2_all_yellow', 'Contours (Yellow)', false],
 		['soil_names', 'Soil Names', false],
 		['soil_hydric', 'Hydric Soils', false],
 		//		['geology_view', 'Geology', false],
