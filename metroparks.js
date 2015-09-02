@@ -258,6 +258,7 @@ Ext.onReady(function () {
 		['cm_bridge_view', 'Trail Bridges', false],
 	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
 	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
+                ['cm_wetlands', 'CM Wetlands Inventory', false],
 		['wetlands_view', 'Wetlands', false],
 		['wetlands_owi', 'OWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
