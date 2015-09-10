@@ -251,7 +251,8 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['greenspace_trails', 'Greenspace Trails (Proposed/Actual)', false],
+		['greenspace_trails', 'Greenspace Trails (2010)', false],
+                ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 	//	['signs', 'Sign Inventory', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
