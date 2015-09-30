@@ -246,6 +246,7 @@ Ext.onReady(function() {
 //	['p_wshed_view', 'Priority Watersheds', false],   
 	['vernal_pools_field', 'Surveyed Vernal Pools', false],
 	['vernal_pools_view', 'Modeled Vernal Pools and Other Wetlands', false],
+        ['cm_wetlands', 'CM Wetlands Inventory', false],  
 	['wetlands_view', 'Wetlands', false],
 	['wetlands_owi', 'OWI Wetlands', false],
 //       ['contours_2', '5-County Contours', false],
