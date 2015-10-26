@@ -253,11 +253,10 @@ Ext.onReady(function () {
 	var overviewsConfig = [
 		['greenspace_trails', 'Greenspace Trails (2010)', false],
                 ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
-	//	['signs', 'Sign Inventory', false],
+	//	['cm_bridges', 'Trail Bridges', false],
                 ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['cm_bridges', 'Trail Bridges', false],
 	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
 	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
                 ['cm_wetlands', 'CM Wetlands Inventory', false],
