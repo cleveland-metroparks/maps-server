@@ -257,7 +257,7 @@ Ext.onReady(function () {
                 ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['cm_bridge_view', 'Trail Bridges', false],
+		['cm_bridges', 'Trail Bridges', false],
 	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
 	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
                 ['cm_wetlands', 'CM Wetlands Inventory', false],
