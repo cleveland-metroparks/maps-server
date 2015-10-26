@@ -254,6 +254,7 @@ Ext.onReady(function () {
 		['greenspace_trails', 'Greenspace Trails (2010)', false],
                 ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 	//	['signs', 'Sign Inventory', false],
+                ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['cm_bridge_view', 'Trail Bridges', false],
