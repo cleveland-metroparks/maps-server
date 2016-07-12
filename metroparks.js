@@ -4,16 +4,8 @@ Ext.Ajax.timeout = 3600000; //1 hour
 
 var GeoserverURL = '/geoserver';
 var GeoserverWMS = GeoserverURL + '/wms?';
-//var GeoserverWMS = '/geowebcache/service/wms?';
-/*
-The above works, as GWC is configured to take arbitrary requests,
-but requires each layer to be configured in the GWC,
-and "Disable Layer Merging"
- */
 
-//var GeowebcacheURL = GeoserverURL + '/gwc/service/wms?';
 var GeowebcacheURL = '/geowebcache/service/wms?';
-//var GeowebcacheURL  = GeoserverURL + '/wms?';
 var defaultPdfFilename = 'cm_gis';
 
 Proj4js.defs["EPSG:3734"] = '+proj=lcc +lat_1=41.7 +lat_2=40.43333333333333 ' +
@@ -77,7 +69,7 @@ Ext.onReady(function () {
 			projection : new OpenLayers.Projection("EPSG:3734"),
 			displayProjection : new OpenLayers.Projection("EPSG:4326"),
 			units : 'ft',
-			displayUnits : 'ft',
+                       	displayUnits : 'ft',
 			controls : []
 		});
 	
@@ -103,7 +95,7 @@ Ext.onReady(function () {
 				GeowebcacheURL, {
 				layers : layers.reverse(),
 				tiled : 'false',
-				transparent : true,
+				transparent : 'true',
 				format : 'image/jpeg'
 			}, {
 				buffer : 0,
@@ -135,37 +127,29 @@ Ext.onReady(function () {
 				'hinckley',
 				'willoughby_2007',
 				'aerial_2011'
-			], 'Aerial (2007-11)', true),
+			], 'Aerial (2007-13)', true),
+                groupLayerBg([ 
+				'2016-06-14-EdgewaterRoundabout_subset',
+                                'hinckley',
+                                'willoughby_2007',
+                                'aerial_2015'
+                        ], 'Aerial (2007-16) experimental', true),
 		groupLayerBg([
 				'summer_aerial_1',
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
 		groupLayerBg([
-				'reservation_bounds_solid',
-				'cuyahoga_street_centerlines',
-				'cuy_roads_poly',
-				'planet_osm_line_outside_cuy_map',
-				'cuy_bridge_decks'
+				'basemap_background',
+				'basemap_cm_boundaries',
+				'basemap_contours',
+				'basemap_hydropolygon',
+				'basemap_impervious',
+				'basemap_buildings',
+				'basemap_cm_trails'
 			], 'Map', true),
-		groupLayerBg([
-				'hinckley_grey',
-				'willoughby_2007_grey',
-				'aerial_2011_grey'
-			], 'Greyscale Aerial (2007-11)', true),
 		groupLayerBg([
 				'aerial_2011_cir'
 			], 'Color Infrared 2011 (Cuyahoga)', true),
-	//	groupLayerBg([
-	//		'ex_mask',
-	//		'ex_facilities_footprints_cm',
-	//		'ex_cuy_roads_poly',
-	//		'ex_cm_trails',
-	//		'ex_detailed_hydro_view',
-	//		'ex_contours_2_all',
-	//		'ex_canopy_coarse',
-	//		'ex_cm_mowed_areas_beta',
-	//		'ex_reservation_boundaries_public_private_cm'
-	//		], 'Existing Conditions', true),
 		groupLayerBg([
 				'usgs_1950s-60s'
 			], '1950s-60s USGS Quads', true));
@@ -212,7 +196,7 @@ Ext.onReady(function () {
 				tiled : 'false',
 				transparent : true,
 				format : 'image/png'
-			}, {
+                                }, {
 				buffer : 0,
 				displayOutsideMaxExtent : true,
 				displayInLayerSwitcher : true,
@@ -247,18 +231,17 @@ Ext.onReady(function () {
 
 
 	
-	var skipLegendLayers = ['Graticule (Geographic Grid)', 'hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Primary Roads'];
+	var skipLegendLayers = ['Graticule (Geographic Grid)', 'hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['greenspace_trails', 'Greenspace Trails (2010)', false],
                 ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 		['cm_bridges', 'Trail Bridges', false],
+                ['confined_spaces', 'Confined Spaces Inventory - 3/16', false],
                 ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-	//	['neorsd_impervious_cm_2012', 'NEORSD Impervious', false],
-	//	['neorsd_service_area', 'NEORSD SMP Service Area', false],
                 ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
 		['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
@@ -266,16 +249,11 @@ Ext.onReady(function () {
                 ['contours_2_all_yellow', 'Contours (Yellow)', false],
 		['soil_names', 'Soil Names', false],
 		['soil_hydric', 'Hydric Soils', false],
-		//		['geology_view', 'Geology', false],
-		//		['bed_depth', 'Bedrock Depth', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
 		['cm_canopy_coarse', 'Forest Canopy', false],
 		['address_view', 'Address Points', false],
-		//	['reservation_bounds', 'Cleveland Metroparks', false],
-		//	['county_parcels','County Parcels (Black)',false],
-		//	['county_parcels_yellow','County Parcels (Yellow)',false],
-		['reservation_bounds', 'Cleveland Metroparks', true],
-		['reservation_bounds_no_restriction', 'Cleveland Metroparks (All)', false],
+		['reservation_bounds', 'Cleveland Metroparks (All)', true],
+		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],
 		['cuva_bounds', 'Cuyahoga Valley NP', false],
 		['ta_view', 'Terrestrial Assessment - L1', false]
 	].reverse();
@@ -377,12 +355,6 @@ Ext.onReady(function () {
 			}
 		};
 	};
-/*	
-//	layers.push(
-//		groupLayer1([
-//				'reservation_boundaries_public_private_cm_dissolved_mask_gradien'
-//			], 'Mask'));
-*/	
 	// for non-background group layers
 	
 	/////////////////////////////////////////////////////
@@ -449,6 +421,8 @@ Ext.onReady(function () {
 	
 	layers.push(
 		groupLayerNoSwitcher([
+				'cm_use_area_labels',
+				'cm_use_area_mask',
 				'facility_areas_cm',
 				'facilities_cm',
 				'detailed_hydro_labels',
@@ -749,31 +723,6 @@ Ext.onReady(function () {
 			width : 210
 		});
 	
-	/** api: events[beforeprint]
-	 *  Triggered when the print method is called.
-	 *
-	 *  Listener arguments:
-	 *  * printProvider - :class:`GeoExt.data.PrintProvider` this
-	 *    PrintProvider
-	 *  * map - ``OpenLayers.Map`` the map being printed
-	 *  * pages - Array of :class:`GeoExt.data.PrintPage` the print
-	 *    pages being printed
-	 *  * options - ``Object`` the options to the print command
-	 */
-	/** api: event[encodelayer]
-	 *  Triggered when a layer is encoded. This can be used to modify
-	 *  the encoded low-level layer object that will be sent to the
-	 *  print service.
-	 *
-	 *  Listener arguments:
-	 *
-	 *  * printProvider - :class:`GeoExt.data.PrintProvider` this
-	 *    PrintProvider
-	 *  * layer - ``OpenLayers.Layer`` the layer which is about to be
-	 *    encoded.
-	 *  * encodedLayer - ``Object`` the encoded layer that will be
-	 *    sent to the print service.
-	 */
 	printProvider.on({
 		'encodelayer' : function (provider, layer, encodedLayer) {
 			if (layer.printUrl) {
@@ -980,8 +929,6 @@ Ext.onReady(function () {
 			title : 'GIS Layers',
 			autoScroll : true,
 			loader : new Ext.tree.TreeLoader({
-				// applyLoader has to be set to false to not interfer with loaders
-				// of nodes further down the tree hierarchy
 				applyLoader : false
 			}),
 			root : {
