@@ -163,23 +163,33 @@ Ext.onReady(function() {
 				'summer_aerial_1',
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
-		groupLayerBg([
-				'reservation_bounds_solid',
-				'cuyahoga_street_centerlines',
-				'cuy_roads_poly',
-				'planet_osm_line_outside_cuy_map',
-				'cuy_bridge_decks'
-			], 'Map', true),
+		
+
+                groupLayerBg([
+                                'basemap_cm_trails',
+                                'basemap_buildings',
+                                'basemap_bridgedecks',
+				'basemap_parking',
+                                'basemap_impervious',
+                                'basemap_hydropolygon',
+                                'basemap_contours',
+                                'basemap_cm_boundaries',
+                                'basemap_background'
+                        ], 'Map', true),
+
+
 		groupLayerBg([
 				'hinckley',
 				'willoughby_2007',
 				'aerial_2011'
-			], 'Aerial (2007-11)', true),
-		groupLayerBg([
-				'hinckley_grey',
-				'willoughby_2007_grey',
-				'aerial_2011_grey'
-			], 'Greyscale Aerial (2007-11)', true),
+			], 'Aerial (2007-13)', true),
+
+
+//		groupLayerBg([
+//				'hinckley_grey',
+//				'willoughby_2007_grey',
+//				'aerial_2011_grey'
+//			], 'Greyscale Aerial (2007-11)', true),
 		groupLayerBg([
 				'aerial_2011_cir'
 			], 'Color Infrared 2011 (Cuyahoga)', true),
@@ -218,11 +228,13 @@ Ext.onReady(function() {
 
 //	name of layer, display name, visibility
     var overviewsConfig = [
-//        ['signs', 'Sign Inventory', false],
-//        ['cm_trails', 'Trails', true],
+//      ['signs', 'Sign Inventory', false],
+//      ['cm_trails', 'Trails', true],
 //	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 //	['cm_bridge_view', 'Trail Bridges', true],
-//        ['boundaries_test', 'B-Test', false],
+//      ['boundaries_test', 'B-Test', false],
+//      ['pcap_cameras_2011_view', 'PCAP Cameras 2011', false],
+        ['pcap_plots_2011', 'PCAP Plots Approximate', false],
         ['pcap', 'Assessed PCAP Sites', false],
         ['pcap_2012_final', 'PCAP 2012', false],
         ['pcap_2012_rings_final', 'PCAP 2012 with Compass', false],
@@ -238,7 +250,8 @@ Ext.onReady(function() {
 //	['pcap_sites_orig_compass_140m', 'PCAP 140m Compass', false],
 	['pcap_ash_treatment', 'Ash Treatment', false],
 //	['pcap_sites', 'PCAP nudged', false],
-        ['phwh_view', 'Primary Headwater Streams', false],
+//      ['phwh_view', 'Primary Headwater Streams', false],
+        ['phwh_2016', 'Primary Headwater Streams (2015 update)', false],
         ['cm_trails', 'Trails', false],
 	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
@@ -264,7 +277,7 @@ Ext.onReady(function() {
 	['cm_canopy_coarse', 'Forest Canopy', false],
 //	['ohio_counties', 'Ohio Counties', false],
 //	['quadrangle_index_24k', 'USGS Quadrangles', false],
-	['reservation_bounds', 'Cleveland Metroparks', true],
+	['reservation_bounds', 'Cleveland Metroparks (All)', true],
 	['counties_quads', 'USGS Quads / Ohio Counties', false],
 	['cuva_bounds', 'Cuyahoga Valley NP', false],
 	['ta_view', 'Terrestrial Assessment', false],
