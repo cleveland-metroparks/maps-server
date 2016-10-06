@@ -139,6 +139,7 @@ Ext.onReady(function () {
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
 		groupLayerBg([
+				'cm_points',
 				'basemap_cm_trails',
 				'basemap_buildings',
 				'basemap_bridgedecks',
@@ -240,7 +241,7 @@ Ext.onReady(function () {
 		['greenspace_trails', 'Greenspace Trails (2010)', false],
                 ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 		['cm_bridges', 'Trail Bridges', false],
-                ['confined_spaces', 'Confined Spaces Inventory - 3/16', false],
+                ['confined_spaces', 'Confined Spaces Inventory', false],
                 ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
