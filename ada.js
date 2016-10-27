@@ -149,13 +149,13 @@ Ext.onReady(function () {
 				'basemap_contours',
 				'basemap_cm_boundaries',
 				'basemap_background'
-			], 'Map', true),
+			], 'Map', true)/*,
 		groupLayerBg([
 				'aerial_2011_cir'
 			], 'Color Infrared 2011 (Cuyahoga)', true),
 		groupLayerBg([
 				'usgs_1950s-60s'
-			], '1950s-60s USGS Quads', true));
+			], '1950s-60s USGS Quads', true)*/);
 
 
 	// for non-background group layers
@@ -238,27 +238,27 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['greenspace_trails', 'Greenspace Trails (2010)', false],
-                ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
-		['cm_bridges', 'Trail Bridges', false],
-                ['confined_spaces', 'Confined Spaces Inventory', false],
-                ['hi_docks', 'Hinckley Lake boat docks', false],
+//		['greenspace_trails', 'Greenspace Trails (2010)', false],
+//              ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
+//		['cm_bridges', 'Trail Bridges', false],
+//              ['confined_spaces', 'Confined Spaces Inventory', false],
+//              ['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
-		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-                ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
-		['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
-		['wetlands_nwi', 'NWI Wetlands', false],
+//		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
+//              ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
+//		['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
+//		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
-                ['contours_2_all_yellow', 'Contours (Yellow)', false],
-		['soil_names', 'Soil Names', false],
-		['soil_hydric', 'Hydric Soils', false],
+//              ['contours_2_all_yellow', 'Contours (Yellow)', false],
+//		['soil_names', 'Soil Names', false],
+//		['soil_hydric', 'Hydric Soils', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
-		['cm_canopy_coarse', 'Forest Canopy', false],
-		['address_view', 'Address Points', false],
+//		['cm_canopy_coarse', 'Forest Canopy', false],
+//		['address_view', 'Address Points', false],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
-		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],
-		['cuva_bounds', 'Cuyahoga Valley NP', false],
-		['ta_view', 'Terrestrial Assessment - L1', false]
+//		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],
+//		['cuva_bounds', 'Cuyahoga Valley NP', false],
+//		['ta_view', 'Terrestrial Assessment - L1', false]
 	].reverse();
 	
 	Ext.each(overviewsConfig, function (ly, i, lys) {
