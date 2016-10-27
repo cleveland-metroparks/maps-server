@@ -238,6 +238,9 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
+		['ada_chapter3', 'ADA Chapter 3: Building Blocks', false],
+		['ada_chapter4', 'ADA Chapter 4: Accessible Routes', false],
+		['ada_chapter5', 'ADA Chapter 5: General Site & Building Elements', false],
 //		['greenspace_trails', 'Greenspace Trails (2010)', false],
 //              ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 //		['cm_bridges', 'Trail Bridges', false],
