@@ -2,7 +2,7 @@ OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
 Ext.BLANK_IMAGE_URL = '../ext-3.2.1/resources/images/default/s.gif';
 Ext.Ajax.timeout = 3600000; //1 hour
 
-var GeoserverURL = '/geoserver';
+var GeoserverURL = '/geoservers';
 var GeoserverWMS = GeoserverURL + '/wms?';
 
 var GeowebcacheURL = '/geowebcache/service/wms?';
