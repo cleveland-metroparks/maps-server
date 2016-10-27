@@ -238,6 +238,7 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
+		['pdadareports', 'PD ADA Reports', false],
 		['ada_chapter3', 'ADA Chapter 3: Building Blocks', false],
 		['ada_chapter4', 'ADA Chapter 4: Accessible Routes', false],
 		['ada_chapter5', 'ADA Chapter 5: General Site & Building Elements', false],
