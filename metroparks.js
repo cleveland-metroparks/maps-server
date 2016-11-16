@@ -130,6 +130,7 @@ Ext.onReady(function () {
 			], 'Aerial (2007-13)', true),
                 groupLayerBg([ 
 				'2016-06-14-EdgewaterRoundabout_subset',
+				'seneca',
                                 'hinckley',
                                 'willoughby_2007',
                                 'aerial_2015'
