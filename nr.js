@@ -165,17 +165,18 @@ Ext.onReady(function() {
 			], 'Summer Aerial 2010', true),
 		
 
-                groupLayerBg([
-                                'basemap_cm_trails',
-                                'basemap_buildings',
-                                'basemap_bridgedecks',
+		groupLayerBg([
+				'cm_points',
+				'basemap_cm_trails',
+				'basemap_buildings',
+				'basemap_bridgedecks',
 				'basemap_parking',
-                                'basemap_impervious',
-                                'basemap_hydropolygon',
-                                'basemap_contours',
-                                'basemap_cm_boundaries',
-                                'basemap_background'
-                        ], 'Map', true),
+				'basemap_impervious',
+				'basemap_hydropolygon',
+				'basemap_contours',
+				'basemap_cm_boundaries',
+				'basemap_background'
+			], 'Map', true),
 
 
 		groupLayerBg([
