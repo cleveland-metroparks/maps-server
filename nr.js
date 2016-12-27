@@ -271,7 +271,7 @@ Ext.onReady(function() {
 //	['hydro_view', 'Hydro', false],
 //	['geology_view', 'Geology', false],
 //	['bed_depth', 'Bedrock Depth', false],
-	['wbdhu12_dissolved_3734', '12-Digit Watershed Boundary Dataset', false],
+	['wbdhu12_dissolved_3734', '12-Digit Watershed Boundary', false],
 	['detailed_hydro_view', 'Detailed Hydro', false],
 	['core_areas', 'Core Areas - Modeled 2014', false],
 	['hydroshadow', 'TestHydro', false],
