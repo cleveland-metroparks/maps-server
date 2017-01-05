@@ -284,8 +284,8 @@ Ext.onReady(function() {
 	['counties_quads', 'USGS Quads / Ohio Counties', false],
 	['cuva_bounds', 'Cuyahoga Valley NP', false],
 	['ta_view', 'Terrestrial Assessment', false],
-        ['nhd_lake_erie', 'Lake Erie', true],
-        ['tpi', 'Landscape Position', false]
+//      ['nhd_lake_erie', 'Lake Erie', true],
+//      ['tpi', 'Landscape Position', false]
 ].reverse();
 
     Ext.each(overviewsConfig, function(ly,i,lys){
