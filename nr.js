@@ -253,7 +253,7 @@ Ext.onReady(function() {
 //	['pcap_sites', 'PCAP nudged', false],
 //      ['phwh_view', 'Primary Headwater Streams', false],
         ['phwh_2016', 'Primary Headwater Streams (2016 update)', false],
-        ['phwh_2016_hhei', 'Primary Headwater Streams (HHEI Cat)', false],
+        ['phwh_2016_hmfei', 'Primary Headwater Streams (HMFEI Cat)', false],
         ['cm_trails', 'Trails', false],
 	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 //	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
