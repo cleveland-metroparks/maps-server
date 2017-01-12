@@ -129,6 +129,7 @@ Ext.onReady(function () {
 				'aerial_2011'
 			], 'Aerial (2007-13)', true),
                 groupLayerBg([ 
+				'zoo',
 				'2016-06-14-EdgewaterRoundabout_subset',
 				'seneca',
                                 'hinckley',
