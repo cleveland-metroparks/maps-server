@@ -155,10 +155,10 @@ Ext.onReady(function () {
 			], 'Map', true),
 		groupLayerBg([
 				'aerial_2011_cir'
-			], 'Color Infrared 2011 (Cuyahoga)', true)//,
-//		groupLayerBg([
-//				'usgs_1950s-60s'
-//			], '1950s-60s USGS Quads', true)*/)
+			], 'Color Infrared 2011 (Cuyahoga)', true),
+		groupLayerBg([
+				'usgs_1950s-60s'
+			], '1950s-60s USGS Quads', true))
 		;
 
 
