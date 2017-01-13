@@ -251,7 +251,7 @@ Ext.onReady(function () {
 		['ada_chapter9', 'ADA Chapter 9: Built-in Elements', false],
 		['ada_chapter10_rec', 'ADA Chapter 10: Recreation Facilities', false],
 		['ada_chapter10_outdoor', 'ADA Chapter 10: Outdoor Constructed Features', false],
-		['pdadareports', 'PD ADA Reports', false],
+		['pdadareports', 'PD ADA Reports', true],
 //		['greenspace_trails', 'Greenspace Trails (2010)', false],
 //              ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 //		['cm_bridges', 'Trail Bridges', false],
@@ -339,7 +339,7 @@ Ext.onReady(function () {
 			], 'Golf', false),
 		groupLayerNoSwitcher1([
 				'nhd_lake_erie'
-			], 'Lake Erie', true));
+			], 'Lake Erie', false));
 	
 	/////////////////////////////////////////////////////
 	var groupLayer1 = function (layers, groupName) {
