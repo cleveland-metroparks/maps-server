@@ -234,7 +234,7 @@ Ext.onReady(function () {
 				'odot_state_routes',
 				'odot_us_routes',
 				'odot_interstate'
-			], 'Primary Roads', true));
+			], 'Primary Roads', false));
 
 
 	
