@@ -129,7 +129,9 @@ Ext.onReady(function () {
 				'aerial_2011'
 			], 'Aerial (2007-13)', true),
                 groupLayerBg([ 
+				'zoo',
 				'2016-06-14-EdgewaterRoundabout_subset',
+				'seneca',
                                 'hinckley',
                                 'willoughby_2007',
                                 'aerial_2015'
@@ -138,6 +140,7 @@ Ext.onReady(function () {
 				'summer_aerial_1',
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
+		
 		groupLayerBg([
 				'cm_points',
 				'basemap_cm_trails',
@@ -149,13 +152,14 @@ Ext.onReady(function () {
 				'basemap_contours',
 				'basemap_cm_boundaries',
 				'basemap_background'
-			], 'Map', true)/*,
+			], 'Map', true),
 		groupLayerBg([
 				'aerial_2011_cir'
-			], 'Color Infrared 2011 (Cuyahoga)', true),
-		groupLayerBg([
-				'usgs_1950s-60s'
-			], '1950s-60s USGS Quads', true)*/);
+			], 'Color Infrared 2011 (Cuyahoga)', true)//,
+//		groupLayerBg([
+//				'usgs_1950s-60s'
+//			], '1950s-60s USGS Quads', true)*/)
+		;
 
 
 	// for non-background group layers
