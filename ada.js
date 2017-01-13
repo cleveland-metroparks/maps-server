@@ -242,7 +242,6 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['pdadareports', 'PD ADA Reports', false],
 		['ada_chapter3', 'ADA Chapter 3: Building Blocks', false],
 		['ada_chapter4', 'ADA Chapter 4: Accessible Routes', false],
 		['ada_chapter5', 'ADA Chapter 5: General Site & Building Elements', false],
@@ -252,6 +251,7 @@ Ext.onReady(function () {
 		['ada_chapter9', 'ADA Chapter 9: Built-in Elements', false],
 		['ada_chapter10_rec', 'ADA Chapter 10: Recreation Facilities', false],
 		['ada_chapter10_outdoor', 'ADA Chapter 10: Outdoor Constructed Features', false],
+		['pdadareports', 'PD ADA Reports', false],
 //		['greenspace_trails', 'Greenspace Trails (2010)', false],
 //              ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 //		['cm_bridges', 'Trail Bridges', false],
