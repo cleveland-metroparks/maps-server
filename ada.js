@@ -438,10 +438,11 @@ Ext.onReady(function () {
 	
 	layers.push(
 		groupLayerNoSwitcher([
-				'cm_use_area_labels',
-				'cm_use_area_mask',
-				'facility_areas_cm',
-				'facilities_cm',
+	//			'cm_use_area_labels',
+	//			'cm_use_area_mask',
+	//			'facility_areas_cm',
+	//			'facilities_cm',
+				'cm_points',
 				'detailed_hydro_labels',
 				'planet_osm_line_outside_cuy',
 				'cuyahoga_street_centerlines_labels',
