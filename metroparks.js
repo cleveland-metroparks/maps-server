@@ -524,7 +524,7 @@ Ext.onReady(function () {
 	var info = new OpenLayers.Control.WMSGetFeatureInfo({
 			drillDown : false,
 			queryVisible : true,
-			panMapIfOutOfView : false,
+			panMapIfOutOfView : true,
 			url : GeoserverWMS,
 //			layers : [reservation_bounds],
 //			layers: overviewsConfig[16],
