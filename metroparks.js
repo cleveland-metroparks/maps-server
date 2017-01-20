@@ -525,6 +525,7 @@ Ext.onReady(function () {
 			drillDown : false,
 			queryVisible : true,
 			panMapIfOutOfView : true,
+			maxFeatures: 15,
 			url : GeoserverWMS,
 //			layers : [reservation_bounds],
 //			layers: overviewsConfig[16],
