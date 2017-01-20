@@ -93,7 +93,7 @@ Ext.onReady(function() {
 	drillDown: false,
 	queryVisible: true,
 	panMapIfOutOfView: false,
-	maxFeatures: 15,
+	maxFeatures: 25,
 	url: GeoserverWMS,
 	layerUrls: [GeowebcacheURL],
 	eventListeners: {
