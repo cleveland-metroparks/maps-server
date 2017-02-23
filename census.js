@@ -166,8 +166,17 @@ Ext.onReady(function() {
 //	    'summer_aerial_2',
 //	], 'Summer Aerial 2010', true),
 	groupLayerBg([
-	    'nhd_lake_erie'
-	], 'Map', true)
+			'cm_points',
+			'basemap_cm_trails',
+			'basemap_buildings',
+			'basemap_bridgedecks',
+			'basemap_parking',
+			'basemap_impervious',
+			'basemap_hydropolygon',
+			'basemap_contours',
+			'basemap_cm_boundaries',
+			'basemap_background'
+				], 'Map', true),
 /*	groupLayerBg([
 	    'reservation_bounds_solid',
 	    'cuyahoga_street_centerlines',
