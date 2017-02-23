@@ -176,7 +176,7 @@ Ext.onReady(function() {
 			'basemap_contours',
 			'basemap_cm_boundaries',
 			'basemap_background'
-				], 'Map', true),
+				], 'Map', true)
 /*	groupLayerBg([
 	    'reservation_bounds_solid',
 	    'cuyahoga_street_centerlines',
