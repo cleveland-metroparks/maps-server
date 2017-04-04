@@ -247,7 +247,7 @@ Ext.onReady(function () {
                 //['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['neo_airport_centroid', 'Airport', false],
+		['neo_airport_centroids', 'Airport', false],
 		['neo_airspace_merged', 'NEO Air Space', false],
                 ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
 		['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
