@@ -285,6 +285,7 @@ Ext.onReady(function() {
 	['reservation_bounds', 'Cleveland Metroparks (All)', true],
 	['counties_quads', 'USGS Quads / Ohio Counties', false],
 	['cuva_bounds', 'Cuyahoga Valley NP', false],
+	['leap_biodiversity_color', 'LEAP Biodiversity', false],
 	['ta_view', 'Terrestrial Assessment', false],
 //      ['nhd_lake_erie', 'Lake Erie', true],
 //      ['tpi', 'Landscape Position', false]
