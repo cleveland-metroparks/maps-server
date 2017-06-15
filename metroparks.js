@@ -1005,6 +1005,8 @@ Ext.onReady(function () {
 		'              |                 ',
 		'<a href="nr.html" target="_blank">Natural Resources</a>',
 		'              |                 ',
+		'<a href="ada.html" target="_blank">ADA Assessments</a>',
+		'              |                 ',
 		'<a href="../landmaps/index.html" target="_blank">Landmaps</a>',
 		' || ', '<small>Most data used are from public sources.  Remaining map data &copy; <a href="www.openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.</small>'
 	];
