@@ -130,7 +130,7 @@ Ext.onReady(function () {
                                 'hinckley',
                                 'willoughby_2007',
                                 'aerial_2015'
-                        ], 'Aerial (2007-17) Including Drone Imagery', true),
+                        ], 'Aerial(2007-17) includes drone', true),
 		groupLayerBg([
 				'hinckley',
 				'willoughby_2007',
