@@ -123,7 +123,12 @@ Ext.onReady(function () {
 	};
 	
 	layers.push(
-                groupLayerBg([ 
+		groupLayerBg([
+				'hinckley',
+				'willoughby_2007',
+				'aerial_2011'
+			], 'Aerial (2007-13)', true),                
+		groupLayerBg([ 
 				'zoo',
 				'2016-06-14-EdgewaterRoundabout_subset',
 				'seneca',
@@ -131,11 +136,6 @@ Ext.onReady(function () {
                                 'willoughby_2007',
                                 'aerial_2015'
                         ], 'Aerial(2007-17) inc. drone images', true),
-		groupLayerBg([
-				'hinckley',
-				'willoughby_2007',
-				'aerial_2011'
-			], 'Aerial (2007-13)', true),
 		groupLayerBg([
 				'summer_aerial_1',
 				'summer_aerial_2'
