@@ -240,11 +240,10 @@ Ext.onReady(function () {
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['greenspace_trails', 'Greenspace Trails (2010)', false],
-                ['trails_leadership_network', 'Trails Leadership Network (2015)', false],
+		['trails_leadership_network', 'Trails Leadership Network (2015)', false],
 		['cm_bridges', 'Trail Bridges', false],
-                ['confined_spaces', 'Confined Spaces Inventory', false],
-                //['hi_docks', 'Hinckley Lake boat docks', false],
+    ['confined_spaces', 'Confined Spaces Inventory', false],
+    //['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['neo_airport_centroids', 'Airport', false],
@@ -483,7 +482,7 @@ Ext.onReady(function () {
 //special loader for layers that need to be on top of many other things - AND show in the legend..
 
 	var topMost = [
-		['greenspace_trails', 'Greenspace Trails', false]
+		['metroparks:reservation_bounds', 'Reservation Boundaries', false]
 	].reverse();
 
 	Ext.each(topMost, function (ly, i, lys) {
@@ -505,7 +504,7 @@ Ext.onReady(function () {
 			}));
 		layers.push(overviews[i]);
 	});
-
+/*
 	LEGEND.loadStyles(topMost);
 
         var reservation_bounds = new OpenLayers.Layer.WMS("Reservation Boundaries",
@@ -513,7 +512,7 @@ Ext.onReady(function () {
             {'layers': 'metroparks:reservation_bounds', transparent: true, format: 'image/png'},
             {isBaseLayer: false}
         );
-
+*/
 // check legend use of overviewsConfig to see how to use a exclude (or include) list to only GetFeatureInfo for needed layers.  The above is a hack... .
 
 	////// WMS GetFeatureInfo
