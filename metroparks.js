@@ -28,12 +28,12 @@ function formatLonlats(lonLat) {
 
 Ext.onReady(function () {
 	Ext.QuickTips.init();
-	
+
 	var host = document.location.protocol + '//' + document.location.host;
 	var path = document.location.pathname.split('/');
-	
+
 	var iconWidth = iconHeight = 30;
-	
+
 	printProvider = new GeoExt.data.PrintProvider({
 			//method: 'GET',
 			method : 'POST',
@@ -53,15 +53,15 @@ Ext.onReady(function () {
 				preferredIntervalFractions : [0.1, 0.2, 0.4]
 			}
 		});
-	
+
 	var k = OpenLayers.INCHES_PER_UNIT['ft'] * OpenLayers.DOTS_PER_INCH;
 	var scales = [600, 1200, 2400, 4800, 6000, 9600, 12000, 15480, 24000, 31680, 50000, 63360, 250000, 500000, 1000000].reverse();
 	var resolutions = [];
-	
+
 	Ext.each(scales, function (it, i, all) {
 		resolutions[i] = it / k;
 	});
-	
+
 	map = new OpenLayers.Map({
 			allOverlays : false,
 			scales : scales,
@@ -72,7 +72,7 @@ Ext.onReady(function () {
                        	displayUnits : 'ft',
 			controls : []
 		});
-	
+
 	map.addControl(new OpenLayers.Control.MousePosition({
 			formatOutput : formatLonlats
 		}));
@@ -80,16 +80,16 @@ Ext.onReady(function () {
 	map.addControl(new OpenLayers.Control.ScaleLine());
 	map.addControl(new OpenLayers.Control.Scale());
 	map.addControl(new OpenLayers.Control.LayerSwitcher());
-		
+
 	var layers = [];
 	var baseLayers = [];
 	var overviews = [];
 
-	
+
 	// For background group layers.
-	
+
 	var excludeLegend = '';
-	
+
 	var groupLayerBg = function (layers, groupName, excludeLegend) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
 				GeowebcacheURL, {
@@ -110,7 +110,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeafBg = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -121,14 +121,14 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	layers.push(
 		groupLayerBg([
 				'hinckley',
 				'willoughby_2007',
 				'aerial_2011'
-			], 'Aerial (2007-13)', true),                
-		groupLayerBg([ 
+			], 'Aerial (2007-13)', true),
+		groupLayerBg([
 				'zoo',
 				'2016-06-14-EdgewaterRoundabout_subset',
 				'seneca',
@@ -161,7 +161,7 @@ Ext.onReady(function () {
 
 
 	// for non-background group layers
-	
+
 	/////////////////////////////////////////////////////
 	var groupLayer = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
@@ -182,7 +182,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeaf = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -193,7 +193,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	var groupLayerNoSwitcher = function (layers, groupName, gLNSvis) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
 				GeoserverWMS, {
@@ -212,7 +212,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeafNoSwitcher = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -223,7 +223,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	layers.push(
 /*		groupLayerNoSwitcher([
 				'reservation_boundaries_public_private_cm_dissolved_mask_gradien'
@@ -235,9 +235,9 @@ Ext.onReady(function () {
 			], 'Primary Roads', true));
 
 
-	
-	var skipLegendLayers = ['Graticule (Geographic Grid)', 'hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
-	
+
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['greenspace_trails', 'Greenspace Trails (2010)', false],
@@ -264,7 +264,7 @@ Ext.onReady(function () {
 		['cuva_bounds', 'Cuyahoga Valley NP', false],
 		['ta_view', 'Terrestrial Assessment - L1', false]
 	].reverse();
-	
+
 	Ext.each(overviewsConfig, function (ly, i, lys) {
 		overviews.push(
 			new OpenLayers.Layer.WMS(
@@ -284,9 +284,9 @@ Ext.onReady(function () {
 			}));
 		layers.push(overviews[i]);
 	});
-	
+
 	LEGEND.loadStyles(overviewsConfig);
-	
+
 	var groupLayerNoSwitcher1 = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
 				GeowebcacheURL, {
@@ -306,7 +306,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeafNoSwitcher1 = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -317,7 +317,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	layers.push(
 		groupLayerNoSwitcher1([
 				'cm_buildings_outline',
@@ -330,7 +330,7 @@ Ext.onReady(function () {
 		groupLayerNoSwitcher1([
 				'nhd_lake_erie'
 			], 'Lake Erie', true));
-	
+
 	/////////////////////////////////////////////////////
 	var groupLayer1 = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
@@ -351,7 +351,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayer1Leaf = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -363,7 +363,7 @@ Ext.onReady(function () {
 		};
 	};
 	// for non-background group layers
-	
+
 	/////////////////////////////////////////////////////
 	var groupLayer = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
@@ -384,7 +384,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeaf = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -395,7 +395,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	var groupLayerNoSwitcher = function (layers, groupName, gLNSvis) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
 				GeoserverWMS, {
@@ -414,7 +414,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeafNoSwitcher = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -425,7 +425,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	layers.push(
 		groupLayerNoSwitcher([
 				//'cm_use_area_labels',
@@ -442,9 +442,9 @@ Ext.onReady(function () {
 		groupLayerNoSwitcher([
 				'cities_and_townships'
 			], 'City and Township Boundaries', false));
-	
+
 	// for non-background group layers
-	
+
 	/////////////////////////////////////////////////////
 	var groupLayer = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
@@ -465,7 +465,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-	
+
 	var groupLayerLeaf = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
@@ -476,7 +476,7 @@ Ext.onReady(function () {
 			}
 		};
 	};
-	
+
 	layers.push(
 		groupLayer([
 				'parcels_yellow'
@@ -491,7 +491,7 @@ Ext.onReady(function () {
 	var topMost = [
 		['greenspace_trails', 'Greenspace Trails', false]
 	].reverse();
-	
+
 	Ext.each(topMost, function (ly, i, lys) {
 		overviews.push(
 			new OpenLayers.Layer.WMS(
@@ -511,11 +511,11 @@ Ext.onReady(function () {
 			}));
 		layers.push(overviews[i]);
 	});
-	
+
 	LEGEND.loadStyles(topMost);
 
         var reservation_bounds = new OpenLayers.Layer.WMS("Reservation Boundaries",
-            GeoserverWMS, 
+            GeoserverWMS,
             {'layers': 'metroparks:reservation_bounds', transparent: true, format: 'image/png'},
             {isBaseLayer: false}
         );
@@ -545,15 +545,15 @@ Ext.onReady(function () {
 				}
 			}
 		});
-	
+
 	map.addControl(info);
 	info.activate();
-	
+
 	//  end of popup code
 
-	
+
 	var ctrlBtns = [];
-	
+
 
 
 	ctrlBtns.push(' ');
@@ -569,21 +569,8 @@ Ext.onReady(function () {
 			map.zoomToExtent(
 				extentLayer.features[0].geometry.getBounds());
 		}
-	}, '|', {
-		text : 'Graticule',
-		enableToggle : true,
-		pressed : false,
-		tooltip : 'show/hide graticule',
-		handler : function (button, evt) {
-			var gratLayer = graticule.gratLayer;
-			
-			if (button.pressed) {
-				gratLayer.setVisibility(true);
-			} else {
-				gratLayer.setVisibility(false);
-			}
-		}
-	}, '->', {
+	},
+	 '->', {
 		text : 'Print (on/off)',
 		enableToggle : true,
 		pressed : false,
@@ -614,7 +601,7 @@ Ext.onReady(function () {
 			printForm.printExtent.print(printForm.printOptions);
 		}
 	});
-	
+
 	ctrlBtns.push('-');
 	ctrlBtns.push(new GeoExt.Action({
 			text : 'Navigate',
@@ -630,13 +617,13 @@ Ext.onReady(function () {
 			tooltip : 'navigation',
 			toggleGroup : 'nav'
 		}));
-	
+
 	ctrlBtns.push('-');
 	ctrlBtns.push({
 		xtype : 'tbtext',
 		text : 'Measure:'
 	});
-	
+
 	ctrlBtns.push(
 		new GeoExt.ux.MeasureLength({
 			map : map,
@@ -646,7 +633,7 @@ Ext.onReady(function () {
 			},
 			toggleGroup : 'nav'
 		}));
-	
+
 	ctrlBtns.push(
 		new GeoExt.ux.MeasureArea({
 			map : map,
@@ -657,9 +644,9 @@ Ext.onReady(function () {
 			},
 			toggleGroup : 'nav'
 		}));
-	
+
 	//	skipLayerSwitcher[i].setDisplayInLayerSwitcher(false)
-	
+
 	mapPanel = new GeoExt.MapPanel({
 			border : true,
 			region : 'center',
@@ -667,7 +654,7 @@ Ext.onReady(function () {
 			layers : layers,
 			tbar : ctrlBtns
 		});
-	
+
 	var extentLayer = new OpenLayers.Layer.Vector('Print Area', {
 			displayInLayerSwitcher : false,
 			styleMap : new OpenLayers.StyleMap(new OpenLayers.Style(Ext.applyIf({
@@ -692,7 +679,7 @@ Ext.onReady(function () {
 					}
 				}))
 		});
-	
+
 	legendPanel = new GeoExt.LegendPanel({
 			map : map,
 			width : 200,
@@ -713,7 +700,7 @@ Ext.onReady(function () {
 				skipLegendLayers.indexOf(record.get('layer').name) == -1;
 			}
 		});
-	
+
 	printForm = new GeoExt.ux.SimplePrint({
 			mapPanel : mapPanel,
 			layer : extentLayer, // optional
@@ -731,7 +718,7 @@ Ext.onReady(function () {
 			border : false,
 			width : 210
 		});
-	
+
 	printProvider.on({
 		'encodelayer' : function (provider, layer, encodedLayer) {
 			if (layer.printUrl) {
@@ -745,23 +732,23 @@ Ext.onReady(function () {
 		'beforeprint' : function (provider, map, pages, options) {
 			var scale = map.getScale();
 			var legends = [];
-			
+
 			for (var i = 0; i < overviewsConfig.length; i++) {
 				var layer = overviewsConfig[i];
 				var layerName = layer[1];
-				
+
 				if (skipLegendLayers.indexOf(layerName) === -1) {
 					var mapLayer = map.getLayersByName(layerName)[0];
-					
+
 					if (mapLayer && mapLayer.visibility) {
 						var layerRules = LEGEND.sldGetRules(layer[3]);
 						var scaleRules = LEGEND.filterRulesForScale(layerRules, scale);
-						
+
 						var layerLegend = {
 							name : layerName
 						};
 						var layerClasses = [];
-						
+
 						if (scaleRules.length === 1 && scaleRules[0].name === 'default') {
 							layerClasses.push({
 								name : '',
@@ -785,7 +772,7 @@ Ext.onReady(function () {
 								});
 							}
 						}
-						
+
 						if (layerClasses.length > 0) {
 							layerLegend['classes'] = layerClasses;
 							legends.push(layerLegend);
@@ -793,9 +780,9 @@ Ext.onReady(function () {
 					}
 				}
 			}
-			
+
 			provider.customParams.legends = legends;
-			
+
 			var fName = printForm2.getForm().findField('outputFilename');
 			if (!fName.getValue()) {
 				fName.setValue(defaultPdfFilename);
@@ -803,7 +790,7 @@ Ext.onReady(function () {
 		},
 		scope : printProvider
 	});
-	
+
 	printProvider.on({
 		'printexception' : function (provider, resp) {
 			this.hide();
@@ -812,13 +799,13 @@ Ext.onReady(function () {
 			if (infoText.length > 5) {
 				infoText = infoText.slice(0, 5).join('<br />');
 			}
-			
+
 			Ext.MessageBox.alert('Print failure',
 				'<b>' + resp.statusText + '</b>' + '<br /><br />' + infoText);
 		},
 		scope : printForm.busyMask
 	});
-	
+
 	// add custom fields to the form
 	printForm.insert(0, {
 		xtype : 'textfield',
@@ -829,7 +816,7 @@ Ext.onReady(function () {
 			printPage : printForm.printPage
 		})
 	});
-	
+
 	printForm.insert(4, {
 		xtype : 'box',
 		anchor : '',
@@ -847,7 +834,7 @@ Ext.onReady(function () {
 			]
 		}
 	});
-	
+
 	var printPanel = new Ext.Panel({
 			title : 'Printing',
 			layout : 'fit',
@@ -855,10 +842,10 @@ Ext.onReady(function () {
 				autoScroll : true
 			}
 		});
-	
+
 	printPanel.add(printForm);
 	printPanel.doLayout();
-	
+
 	var printForm2 = new Ext.form.FormPanel({
 			id : 'form2',
 			title : 'Print options & metadata',
@@ -921,7 +908,7 @@ Ext.onReady(function () {
 				}
 			]
 		});
-	
+
 	var treeConfig = new OpenLayers.Format.JSON().write([{
 					nodeType : 'gx_baselayercontainer',
 					expanded : true
@@ -930,7 +917,7 @@ Ext.onReady(function () {
 					expanded : true
 				}
 			], true);
-	
+
 	var layerTree = new Ext.tree.TreePanel({
 			bodyStyle : {
 				padding : '10px 0px 00px 0px'
@@ -947,11 +934,11 @@ Ext.onReady(function () {
 				// from above, that we created with OpenLayers.Format.JON.write.
 				children : Ext.decode(treeConfig)
 			},
-			
+
 			rootVisible : false,
 			lines : true
 		});
-	
+
 	/*
 	var groupConfig = new OpenLayers.Format.JSON().write([
 	groupLayerLeaf('Water bodies'),
@@ -959,7 +946,7 @@ Ext.onReady(function () {
 	groupLayerLeaf('Countour lines'),
 	groupLayerLeaf('Green Areas')
 	], true);
-	
+
 	var groupTree = new Ext.tree.TreePanel({
 	title: 'Layers GetCap',
 	autoScroll: true,
@@ -975,12 +962,12 @@ Ext.onReady(function () {
 	// from above, that we created with OpenLayers.Format.JSON.write.
 	children: Ext.decode(groupConfig)
 	},
-	
+
 	rootVisible: false,
 	lines: false
 	});
 	 */
-	
+
 	var panels = new Ext.Panel({
 			width : 250,
 			split : false,
@@ -992,10 +979,10 @@ Ext.onReady(function () {
 			layout : 'accordion',
 			items : [layerTree, printPanel, printForm2]
 		});
-	
+
 	var zoohortLink = ['              . <small>Additional Maps:</small>                 || ',
 		'<a href="http://cmac-srv-gis/gis/pdnr_gis.html" target="_blank">Old GIS</a>',
-		
+
 		//			'              .                 ',
 		//			'<a href="http://192.168.100.153/geoserver/www/printing" target="_blank">New GIS</a>',
 		'              |                 ',
@@ -1010,7 +997,7 @@ Ext.onReady(function () {
 		'<a href="../landmaps/index.html" target="_blank">Landmaps</a>',
 		' || ', '<small>Most data used are from public sources.  Remaining map data &copy; <a href="www.openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.</small>'
 	];
-	
+
 	var topPanel = new Ext.Panel({
 			title : 'WELCOME TO THE CLEVELAND METROPARKS GIS',
 			width : 500,
@@ -1024,7 +1011,7 @@ Ext.onReady(function () {
 			items : [],
 			html : zoohortLink
 		});
-	
+
 	new Ext.Viewport({
 		layout : 'fit',
 		hideBorders : true,
@@ -1034,7 +1021,7 @@ Ext.onReady(function () {
 			items : [topPanel, mapPanel, panels, legendPanel]
 		}
 	});
-	
+
 	//add graticule layer last in order to print it on top
 	var graticule = new OpenLayers.Control.Graticule({
 			numPoints : 2,
@@ -1056,23 +1043,23 @@ Ext.onReady(function () {
 			}
 		});
 	map.addControl(graticule);
-	
+
 	var panel = new OpenLayers.Control.NavToolbar();
 	map.addControl(panel);
-	
+
 	hist = new OpenLayers.Control.NavigationHistory();
 	map.addControl(hist);
-	
+
 	panel.addControls([hist.next, hist.previous]);
 	map.addControl(panel);
-	
+
 	printForm.printPage.fit(mapPanel.map, {
 		mode : "screen"
 	})
 	printForm.hideExtent();
 	map.removeLayer(extentLayer);
 	Ext.getCmp('print-btn').disable();
-	
+
 	/*
 	var myMask = new Ext.LoadMask(printPanel.body, {msg:'Loading form...'});
 	myMask.show();
@@ -1082,7 +1069,7 @@ Ext.onReady(function () {
 	printPanel.doLayout();
 	});
 	 */
-	
+
 	// if statement allows for the use of permalinks
 	//    if(!map.getCenter()){
 	map.zoomToExtent(
@@ -1090,10 +1077,9 @@ Ext.onReady(function () {
 		//		new OpenLayers.Bounds(2112821,560287,2274487,706832)
 	);
 	//    }
-	
+
 	// avoid pink tiles
 	OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3;
 	OpenLayers.Util.onImageLoadErrorColor = "transparent";
-	
-});
 
+});
