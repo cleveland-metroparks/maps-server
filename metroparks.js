@@ -231,8 +231,7 @@ Ext.onReady(function () {
 			groupLayerNoSwitcher([
 				'odot_state_routes',
 				'odot_us_routes',
-				'odot_interstate',
-				'Airport'
+				'odot_interstate'
 			], 'Primary Roads', true));
 
 	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Primary Roads', 'Airport'];
