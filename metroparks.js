@@ -236,12 +236,11 @@ Ext.onReady(function () {
 
 
 
-	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['trails_leadership_network', 'Trails Leadership Network (2015)', false],
-		['cm_bridges', 'Trail Bridges', false],
     ['confined_spaces', 'Confined Spaces Inventory', false],
     //['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
