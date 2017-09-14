@@ -236,7 +236,7 @@ Ext.onReady(function () {
 
 
 
-	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
@@ -326,10 +326,7 @@ Ext.onReady(function () {
 			], 'Physical Infrastructure', false),
 		groupLayerNoSwitcher1([
 				'golf_view'
-			], 'Golf', false),
-		groupLayerNoSwitcher1([
-				'nhd_lake_erie'
-			], 'Lake Erie', true));
+			], 'Golf', false));
 
 	/////////////////////////////////////////////////////
 	var groupLayer1 = function (layers, groupName) {
