@@ -231,10 +231,11 @@ Ext.onReady(function () {
 			groupLayerNoSwitcher([
 				'odot_state_routes',
 				'odot_us_routes',
-				'odot_interstate'
+				'odot_interstate',
+				'Airport'
 			], 'Primary Roads', true));
 
-	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Primary Roads', 'Airport'];
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
@@ -242,10 +243,8 @@ Ext.onReady(function () {
     ['confined_spaces', 'Confined Spaces Inventory', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['neo_airport_centroids', 'Airport', false],
 		['neo_airspace_merged', 'NEO Air Space', false],
                 ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
-		['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
                 ['contours_2_all_yellow', 'Contours (Yellow)', false],
