@@ -234,15 +234,12 @@ Ext.onReady(function () {
 				'odot_interstate'
 			], 'Primary Roads', true));
 
-
-
-	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Mask', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Primary Roads'];
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['trails_leadership_network', 'Trails Leadership Network (2015)', false],
     ['confined_spaces', 'Confined Spaces Inventory', false],
-    //['hi_docks', 'Hinckley Lake boat docks', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['neo_airport_centroids', 'Airport', false],
@@ -253,14 +250,10 @@ Ext.onReady(function () {
 		['contours_2_all', 'Contours', false],
                 ['contours_2_all_yellow', 'Contours (Yellow)', false],
 		['soil_names', 'Soil Names', false],
-		['soil_hydric', 'Hydric Soils', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
-		['cm_canopy_coarse', 'Forest Canopy', false],
-		['address_view', 'Address Points', false],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
 		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],
-		['cuva_bounds', 'Cuyahoga Valley NP', false],
-		['ta_view', 'Terrestrial Assessment - L1', false]
+		['cuva_bounds', 'Cuyahoga Valley NP', false]
 	].reverse();
 
 	Ext.each(overviewsConfig, function (ly, i, lys) {
