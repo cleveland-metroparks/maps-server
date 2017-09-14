@@ -1022,27 +1022,6 @@ Ext.onReady(function () {
 		}
 	});
 
-	//add graticule layer last in order to print it on top
-	var graticule = new OpenLayers.Control.Graticule({
-			numPoints : 2,
-			labelled : true,
-			visible : false,
-			targetSize : 500,
-			labelFormat : 'dms',
-			layerName : "Graticule (Geographic Grid)",
-			lineSymbolizer : {
-				'strokeWidth' : 1.5,
-				'strokeColor' : '#000000',
-				'strokeDashstyle' : 'dashdot',
-				'strokeOpacity' : 0.7
-			},
-			labelSymbolizer : {
-				'strokeColor' : '#ffffff',
-				'fontColor' : '#000000',
-				'fontWeight' : 'bold'
-			}
-		});
-	map.addControl(graticule);
 
 	var panel = new OpenLayers.Control.NavToolbar();
 	map.addControl(panel);
