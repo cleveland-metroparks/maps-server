@@ -225,9 +225,9 @@ Ext.onReady(function () {
 	};
 
 	layers.push(
-/*		groupLayerNoSwitcher([
-				'reservation_boundaries_public_private_cm_dissolved_mask_gradien'
-			], 'Mask', true),*/
+		groupLayerNoSwitcher([
+				'neo_airport_centroids'
+			], 'neo_airport_centroids', true),
 			groupLayerNoSwitcher([
 				'odot_state_routes',
 				'odot_us_routes',
