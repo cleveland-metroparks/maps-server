@@ -242,10 +242,17 @@ Ext.onReady(function () {
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['pdadareports', 'PD ADA Reports', true],
+		['historical_resources_archaeological', 'Hist. Resources: Archaeological', false],
+		['historical_resources_building', 'Hist. Resources: Building', false],
+		['historical_resources_cemetery', 'Hist. Resources: Cemetery', false],
+		['historical_resources_culturallandscape', 'Hist. Resources: Cultural Landscape', false],
+		['historical_resources_landscapefeature', 'Hist. Resources: Landscape Feature', false],
+		['historical_resources_object', 'Hist. Resources: Object', false],
+		['historical_resources_structure', 'Hist. Resources: Structure', false],
+		['cm_historical_database_export_view', 'Historical Resources: ALL', true],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-    ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
+   //		['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
 		['contours_2_all', 'Contours', false],
 		['detailed_hydro_view', 'Detailed Hydro', false],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
