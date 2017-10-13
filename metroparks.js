@@ -960,7 +960,7 @@ Ext.onReady(function () {
 		});
 
 	var zoohortLink = ['              . <small>Additional Maps:</small>                 || ',
-		'<a href="http://cmac-srv-gis/gis/pdnr_gis.html" target="_blank">Old GIS</a>',
+//		'<a href="http://cmac-srv-gis/gis/pdnr_gis.html" target="_blank">Old GIS</a>',
 
 		//			'              .                 ',
 		//			'<a href="http://192.168.100.153/geoserver/www/printing" target="_blank">New GIS</a>',
@@ -969,9 +969,9 @@ Ext.onReady(function () {
 		//'              |                 ',
 		//'<a href="census.html" target="_blank">Census</a>',
 		//'              |                 ',
-		'<a href="historical-resources.html" target="_blank">Historical Resources</a>',
-		'              |                 ',
 		'<a href="nr.html" target="_blank">Natural Resources</a>',
+		'              |                 ',
+		'<a href="historical-resources.html" target="_blank">Historical Resources</a>',
 		'              |                 ',
 		'<a href="ada.html" target="_blank">ADA Assessments</a>',
 		'              |                 ',
