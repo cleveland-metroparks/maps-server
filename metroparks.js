@@ -959,8 +959,7 @@ Ext.onReady(function () {
 			items : [layerTree, printPanel, printForm2]
 		});
 
-	var zoohortLink = ['              . <small>Additional Maps:</small>
-			   || ',
+	var zoohortLink = ['              . <small>Additional Maps:</small> || ',
 //		'<a href="http://cmac-srv-gis/gis/pdnr_gis.html" target="_blank">Old GIS</a>',
 
 		//			'              .                 ',
