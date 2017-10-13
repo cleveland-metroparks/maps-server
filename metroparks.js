@@ -969,6 +969,8 @@ Ext.onReady(function () {
 		//'              |                 ',
 		//'<a href="census.html" target="_blank">Census</a>',
 		//'              |                 ',
+		'<a href="historical-resources.html" target="_blank">Historical Resources</a>',
+		'              |                 ',
 		'<a href="nr.html" target="_blank">Natural Resources</a>',
 		'              |                 ',
 		'<a href="ada.html" target="_blank">ADA Assessments</a>',
