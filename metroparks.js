@@ -964,7 +964,7 @@ Ext.onReady(function () {
 
 		//			'              .                 ',
 		//			'<a href="http://192.168.100.153/geoserver/www/printing" target="_blank">New GIS</a>',
-		'              |                 ',
+//		'              |                 ',
 		//'<a href="../zoohort" target="_blank">Zoo Horticulture</a>',
 		//'              |                 ',
 		//'<a href="census.html" target="_blank">Census</a>',
