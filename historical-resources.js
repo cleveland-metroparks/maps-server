@@ -128,19 +128,10 @@ Ext.onReady(function () {
 				'willoughby_2007',
 				'aerial_2011'
 			], 'Aerial (2007-13)', true),
-                groupLayerBg([ 
-				'zoo',
-				'2016-06-14-EdgewaterRoundabout_subset',
-				'seneca',
-                                'hinckley',
-                                'willoughby_2007',
-                                'aerial_2015'
-                        ], 'Aerial (2007-16) experimental', true),
 		groupLayerBg([
 				'summer_aerial_1',
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
-		
 		groupLayerBg([
 				'cm_points',
 				'basemap_cm_trails',
@@ -153,9 +144,6 @@ Ext.onReady(function () {
 				'basemap_cm_boundaries',
 				'basemap_background'
 			], 'Map', true),
-		groupLayerBg([
-				'aerial_2011_cir'
-			], 'Color Infrared 2011 (Cuyahoga)', true),
 		groupLayerBg([
 				'usgs_1950s-60s'
 			], '1950s-60s USGS Quads', true))
@@ -238,7 +226,7 @@ Ext.onReady(function () {
 
 
 	
-	var skipLegendLayers = ['Graticule (Geographic Grid)', 'hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Black)', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
@@ -470,10 +458,7 @@ Ext.onReady(function () {
 	layers.push(
 		groupLayer([
 				'parcels_yellow'
-			], 'Parcels (Yellow)'),
-		groupLayer([
-				'parcels'
-			], 'Parcels (Black)'));
+			], 'Parcels (Yellow)'));
 
 
 //special loader for layers that need to be on top of many other things - AND show in the legend..
@@ -557,20 +542,6 @@ Ext.onReady(function () {
 		handler : function () {
 			map.zoomToExtent(
 				extentLayer.features[0].geometry.getBounds());
-		}
-	}, '|', {
-		text : 'Graticule',
-		enableToggle : true,
-		pressed : false,
-		tooltip : 'show/hide graticule',
-		handler : function (button, evt) {
-			var gratLayer = graticule.gratLayer;
-			
-			if (button.pressed) {
-				gratLayer.setVisibility(true);
-			} else {
-				gratLayer.setVisibility(false);
-			}
 		}
 	}, '->', {
 		text : 'Print (on/off)',
@@ -1022,27 +993,6 @@ Ext.onReady(function () {
 		}
 	});
 	
-	//add graticule layer last in order to print it on top
-	var graticule = new OpenLayers.Control.Graticule({
-			numPoints : 2,
-			labelled : true,
-			visible : false,
-			targetSize : 500,
-			labelFormat : 'dms',
-			layerName : "Graticule (Geographic Grid)",
-			lineSymbolizer : {
-				'strokeWidth' : 1.5,
-				'strokeColor' : '#000000',
-				'strokeDashstyle' : 'dashdot',
-				'strokeOpacity' : 0.7
-			},
-			labelSymbolizer : {
-				'strokeColor' : '#ffffff',
-				'fontColor' : '#000000',
-				'fontWeight' : 'bold'
-			}
-		});
-	map.addControl(graticule);
 	
 	var panel = new OpenLayers.Control.NavToolbar();
 	map.addControl(panel);
