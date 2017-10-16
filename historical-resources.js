@@ -129,10 +129,6 @@ Ext.onReady(function () {
 				'aerial_2011'
 			], 'Aerial (2007-13)', true),
 		groupLayerBg([
-				'summer_aerial_1',
-				'summer_aerial_2'
-			], 'Summer Aerial 2010', true),
-		groupLayerBg([
 				'cm_points',
 				'basemap_cm_trails',
 				'basemap_buildings',
