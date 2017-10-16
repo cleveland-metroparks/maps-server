@@ -222,7 +222,7 @@ Ext.onReady(function () {
 
 
 	
-	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels (Yellow)', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
+	var skipLegendLayers = ['hillshade', 'Facility Labels', 'nhd_subregion', 'Parcels', 'Transportation Labels', 'CM Grid', 'Interstate Labels', 'Extra Shields', 'Basic Vector Layer', 'Golf', 'Mask', 'Trail Bridges', 'nhd_lake_erie', 'Transportation Roads and Labels', 'Physical Infrastructure', 'Golf', 'Lake Erie', 'Address Points', 'Hinckley Lake boat docks', 'Primary Roads'];
 	
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
@@ -454,7 +454,7 @@ Ext.onReady(function () {
 	layers.push(
 		groupLayer([
 				'parcels_yellow'
-			], 'Parcels (Yellow)'));
+			], 'Parcels'));
 
 
 //special loader for layers that need to be on top of many other things - AND show in the legend..
