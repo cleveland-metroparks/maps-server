@@ -39,7 +39,7 @@ Ext.onReady(function () {
 			method : 'POST',
 			capabilities : printCapabilities,
 			//url: '/geoserver202/pdf/',
-			customParams : {
+			customParams : { 
 				app : 'config_test'
 			},
 //			app : 'config_test',
@@ -319,10 +319,7 @@ Ext.onReady(function () {
 			], 'Physical Infrastructure', false),
 		groupLayerNoSwitcher1([
 				'golf_view'
-			], 'Golf', false),
-		groupLayerNoSwitcher1([
-				'nhd_lake_erie'
-			], 'Lake Erie', false));
+			], 'Golf', false));
 	
 	/////////////////////////////////////////////////////
 	var groupLayer1 = function (layers, groupName) {
