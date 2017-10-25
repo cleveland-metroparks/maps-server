@@ -236,13 +236,14 @@ Ext.onReady(function () {
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
 		['trails_leadership_network', 'Trails Leadership Network (2015)', false],
-    ['confined_spaces', 'Confined Spaces Inventory', false],
+		['address_view', 'Address Points', false],
+    		['confined_spaces', 'Confined Spaces Inventory', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-    ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
+   		['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
-    ['contours_2_all_yellow', 'Contours (Yellow)', false],
+    		['contours_2_all_yellow', 'Contours (Yellow)', false],
 		['soil_names', 'Soil Names', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
