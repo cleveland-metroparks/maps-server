@@ -659,7 +659,7 @@ Ext.onReady(function () {
 					}
 				}))
 		});
-
+/*
 	legendPanel = new GeoExt.LegendPanel({
 			map : map,
 			width : 200,
@@ -680,7 +680,7 @@ Ext.onReady(function () {
 				skipLegendLayers.indexOf(record.get('layer').name) == -1;
 			}
 		});
-
+*/
 	printForm = new GeoExt.ux.SimplePrint({
 			mapPanel : mapPanel,
 			layer : extentLayer, // optional
@@ -699,7 +699,7 @@ Ext.onReady(function () {
 			width : 210
 		});
 
-	printProvider.on({
+/*	printProvider.on({
 		'encodelayer' : function (provider, layer, encodedLayer) {
 			if (layer.printUrl) {
 				encodedLayer.baseURL = provider.getAbsoluteUrl(layer.printUrl);
@@ -785,7 +785,7 @@ Ext.onReady(function () {
 		},
 		scope : printForm.busyMask
 	});
-
+*/
 	// add custom fields to the form
 	printForm.insert(0, {
 		xtype : 'textfield',
