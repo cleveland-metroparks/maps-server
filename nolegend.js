@@ -271,7 +271,7 @@ Ext.onReady(function () {
 		layers.push(overviews[i]);
 	});
 
-	LEGEND.loadStyles(overviewsConfig);
+/*	LEGEND.loadStyles(overviewsConfig);
 
 	var groupLayerNoSwitcher1 = function (layers, groupName) {
 		var lay = new OpenLayers.Layer.WMS(groupName,
@@ -292,7 +292,7 @@ Ext.onReady(function () {
 			});
 		return lay;
 	};
-
+*/
 	var groupLayerLeafNoSwitcher1 = function (groupName) {
 		return {
 			nodeType : 'gx_layer',
