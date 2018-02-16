@@ -659,7 +659,7 @@ Ext.onReady(function () {
 					}
 				}))
 		});
-/*
+
 	legendPanel = new GeoExt.LegendPanel({
 			map : map,
 			width : 200,
@@ -680,7 +680,6 @@ Ext.onReady(function () {
 				skipLegendLayers.indexOf(record.get('layer').name) == -1;
 			}
 		});
-    */
 
 	printForm = new GeoExt.ux.SimplePrint({
 			mapPanel : mapPanel,
