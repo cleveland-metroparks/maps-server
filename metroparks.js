@@ -240,6 +240,7 @@ Ext.onReady(function () {
     		['confined_spaces', 'Confined Spaces Inventory', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
+		['conservation_easements', 'Conservation Easements', false],
    		['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
