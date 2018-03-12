@@ -257,6 +257,7 @@ Ext.onReady(function() {
         ['phwh_2016_hmfei', 'Primary Headwater Streams (HMFEI Cat)', false],
         ['cm_trails', 'Trails', false],
 	['unsanctioned_trails_view', 'Unsanctioned Trails', false],
+	['conservation_easements', 'Conservation Easements', false],
 //	['cm_ecological_influence_zones', 'Ecological Influence Zones', false],     
 	['occurrence_area_boundaries_2015', 'Occurrence Area Boundaries', false],
 //	['p_wshed_view', 'Priority Watersheds', false],   
