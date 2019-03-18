@@ -241,7 +241,7 @@ Ext.onReady(function () {
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['conservation_easements', 'Conservation Easements', false],
-   		['cm_wetlands', 'CM Wetlands Inventory (2015)', false],
+   		['cm_wetlands', 'CM Wetlands Inventory (Jan 2019)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
     		['contours_2_all_yellow', 'Contours (Yellow)', false],

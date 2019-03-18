@@ -263,7 +263,7 @@ Ext.onReady(function() {
 //	['p_wshed_view', 'Priority Watersheds', false],   
 	['vernal_pools_field', 'Surveyed Vernal Pools', false],
 //	['vernal_pools_view', 'Modeled Vernal Pools and Other Wetlands', false],
-        ['cm_wetlands', 'CM Wetlands Inventory (2015)', false],  
+        ['cm_wetlands', 'CM Wetlands Inventory (Jan 2019)', false],  
 	['cm_wetlands_2005_06', 'CM Wetlands Inventory (2005/2006)', false],
 	['wetlands_nwi', 'NWI Wetlands', false],
 //       ['contours_2', '5-County Contours', false],
