@@ -151,13 +151,7 @@ Ext.onReady(function () {
 				'basemap_contours',
 				'basemap_cm_boundaries',
 				'basemap_background'
-			], 'Map', true),
-		groupLayerBg([
-				'aerial_2011_cir'
-			], 'Color Infrared 2011 (Cuyahoga)', true),
-		groupLayerBg([
-				'usgs_1950s-60s'
-			], '1950s-60s USGS Quads', true));
+			], 'Map', true));
 
 
 	// for non-background group layers
@@ -235,9 +229,6 @@ Ext.onReady(function () {
 
 	//	name of layer, display name, visibility
 	var overviewsConfig = [
-		['trails_leadership_network', 'Trails Leadership Network (2015)', false],
-		['address_view', 'Address Points', false],
-    		['confined_spaces', 'Confined Spaces Inventory', false],
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
 		['conservation_easements', 'Conservation Easements', false],
@@ -245,7 +236,6 @@ Ext.onReady(function () {
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
     		['contours_2_all_yellow', 'Contours (Yellow)', false],
-		['soil_names', 'Soil Names', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
 		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],

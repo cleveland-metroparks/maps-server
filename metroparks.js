@@ -137,6 +137,9 @@ Ext.onReady(function () {
                                 'aerial_2015'
                         ], 'Aerial(2007-17) inc. drone images', true),
 		groupLayerBg([
+                                'cuy_2017'
+                        ], 'Aerial(2017 - reduced resolution)', true),
+		groupLayerBg([
 				'summer_aerial_1',
 				'summer_aerial_2'
 			], 'Summer Aerial 2010', true),
@@ -976,6 +979,8 @@ Ext.onReady(function () {
 		'<a href="historical-resources.html" target="_blank">Historical Resources</a>',
 		'              |                 ',
 		'<a href="ada.html" target="_blank">ADA Assessments</a>',
+'              |                 ',
+		'<a href="landprotection.html" target="_blank">Land Protection</a>',
 		'              |                 ',
 		'<a href="../landmaps/index.html" target="_blank">Landmaps</a>',
 		' || ', '<small>Most data used are from public sources.  Remaining map data &copy; <a href="www.openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.</small>'
