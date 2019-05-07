@@ -231,15 +231,17 @@ Ext.onReady(function () {
 	var overviewsConfig = [
 		['cm_trails', 'Trails', false],
 		['unsanctioned_trails_view', 'Unsanctioned Trails', false],
-		['conservation_easements', 'Conservation Easements', false],
    		['cm_wetlands', 'CM Wetlands Inventory (Jan 2019)', false],
 		['wetlands_nwi', 'NWI Wetlands', false],
 		['contours_2_all', 'Contours', false],
     		['contours_2_all_yellow', 'Contours (Yellow)', false],
 		['detailed_hydro_view', 'Detailed Hydro', true],
+		['parcels_6county', '6-County Parcels', false],
+		['conservation_easements', 'Conservation Easements', false],
 		['reservation_bounds', 'Cleveland Metroparks (All)', true],
 		['reservation_bounds_no_restriction', 'Cleveland Metroparks (Public Only)', false],
-		['cuva_bounds', 'Cuyahoga Valley NP', false]
+		['cuva_bounds', 'Cuyahoga Valley NP', false],
+		['leap_biodiversity_color', 'LEAP Biodiversity', false]
 	].reverse();
 
 	Ext.each(overviewsConfig, function (ly, i, lys) {
